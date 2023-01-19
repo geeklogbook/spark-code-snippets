@@ -1,0 +1,17 @@
+{ "Item Version": 1.0,
+  "Item Creation Time": "2019-04-14 14:15:09",
+  "Trade Dictionary": {
+    "Country": "India",
+    "TradeNumber": "1",
+    "action": {
+      "Action1": false
+    },
+    "Value": "XXXXXXXXXXXXXXX"
+  },
+  "Payments": {
+    "Payment Details": [{
+      "Payment Date": "2019-04-11",
+      "Payment Type": "Rej"
+    }]
+  }
+}
