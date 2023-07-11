@@ -1,9 +1,5 @@
-import os
-import sys
 from pyspark.sql import SparkSession
 
-os.environ['PYSPARK_PYTHON'] = sys.executable
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 spark = SparkSession.builder.getOrCreate()
 
 df = spark.createDataFrame([
@@ -14,5 +10,7 @@ df = spark.createDataFrame([
     (5, 133.2, 5.7, 54, 'F'),
     (3, 124.1, 5.2, 23, 'F'),
     (5, 129.2, 5.3, 42, 'M')], ['id', 'weight', 'height', 'age', 'gender'])
+
+df = df.dropDuplicates()
 
 df.show()
