@@ -1,4 +1,7 @@
+.venv
 .bsp/
 .idea/
 project
 target
+notebooks/
+.ipynb_checkpoints/

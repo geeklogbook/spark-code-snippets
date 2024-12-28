@@ -8,7 +8,7 @@ os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 spark = SparkSession.builder.getOrCreate()
 
 
-df = spark.read.json("/src/main/python/attributesSimple.json")
+df = spark.read.json("./data/attributesSimple.json")
 df.printSchema()
 df.show()
 
