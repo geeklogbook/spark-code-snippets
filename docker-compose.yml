@@ -69,7 +69,7 @@ services:
     networks:
       - spark-network
     command: > 
-      bash -c "ln -s /opt/spark-apps /home/jovyan/spark-apps && start-notebook.sh"
+      bash -c "[ ! -L /home/jovyan/spark-apps ] && ln -s /opt/spark-apps /home/jovyan/spark-apps || true && start-notebook.sh"
 
 networks:
   spark-network:
